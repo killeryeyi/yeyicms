@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>管理系统</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="__PUBLIC__/assets/css/dpl-min.css" rel="stylesheet" type="text/css"/>
+    <link href="__PUBLIC__/assets/css/bui-min.css" rel="stylesheet" type="text/css"/>
+    <link href="__PUBLIC__/assets/css/main-min.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+<div class="header">
+
+    <div class="dl-title">
+
+        <span class="lp-title-port"></span><span class="dl-title-text"></span>
+
+    </div>
+
+    <div class="dl-log">欢迎您，<span class="dl-log-user">{$_SESSION['user_id']['username']}</span><a
+            href="__APP__/login/close" title="退出系统" class="dl-log-quit">[退出]</a>
+    </div>
+</div>
+<div class="content">
+    <div class="dl-main-nav">
+        <div class="dl-inform">
+            <div class="dl-inform-title">贴心小秘书<s class="dl-inform-icon dl-up"></s></div>
+        </div>
+        <ul id="J_Nav" class="nav-list ks-clear">
+            <li class="nav-item dl-selected">
+                <div class="nav-item-inner nav-home">首页</div>
+            </li>
+            <li class="nav-item"><div class="nav-item-inner nav-order">用户</div></li>
+            <!--<li class="nav-item"><div class="nav-item-inner nav-order">表单页</div></li>
+            <li class="nav-item"><div class="nav-item-inner nav-inventory">搜索页</div></li>
+            <li class="nav-item"><div class="nav-item-inner nav-supplier">详情页</div></li>
+            <li class="nav-item"><div class="nav-item-inner nav-marketing">图表</div></li>-->
+        </ul>
+    </div>
+    <ul id="J_NavContent" class="dl-tab-conten">
+
+    </ul>
+</div>
+<script type="text/javascript" src="__PUBLIC__/assets/js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/assets/js/bui.js"></script>
+<script type="text/javascript" src="__PUBLIC__/assets/js/config.js"></script>
+
+<script>
+    BUI.use('common/main', function () {
+        var config = [{
+            id: 'main-banner',
+            homePage: 'main-banner',
+            menu: [{
+                text: '首页内容',
+                items: [
+                    {id: 'main-banner_type', text: '图片分类', href: '__APP__/site/img_type', closeable: false},
+                    {id: 'main-banner', text: '轮播图列表', href: '__APP__/site/index', closeable: false},
+                    {id: 'main-addbanner', text: ' 添加轮播图', href: '__APP__/site/add_banner'},
+                ]
+            }, {
+                text: '文章管理',
+                items: [
+                    {id: 'main-menu', text: '栏目管理', href: '__APP__/article/menu'},
+                    {id: 'main-add_menu', text: '添加栏目', href: '__APP__/article/add_menu'},
+                    {id: 'main-article', text: '文章管理', href: '__APP__/article/index'},
+                    {id: 'main-add_article', text: '添加文章', href: '__APP__/article/add_article'},
+                ]
+            }, {
+                text: '其他',
+                items: [
+                    {id: 'other', text: '在线留言', href: '__APP__/site/guestbook'},
+                ]
+            }]
+        },{
+            id:'user',
+            menu:[{
+                text:'用户管理',
+                items:[
+                    {id:'user',text:'管理员管理',href:'__APP__/user/index'},
+                    {id:'user_group',text:'角色管理',href:'__APP__/user/group'},
+                ]
+            }]
+        }];
+        new PageUtil.MainPage({
+            modulesConfig: config
+        });
+    });
+</script>
+<div style="display:none"></div>
+</body>
+</html>

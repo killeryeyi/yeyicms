@@ -1,0 +1,28 @@
+ <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        
+                        <li>
+                            <a href="__APP__">后台首页</a>
+                        </li>
+						<volist name="menu" id="vo">
+                        <li>
+                            <a href="__APP__/{$vo.url}"> {$vo.title}<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+								<volist name="vo['last']" id="voo">
+                                <li  <if condition="$pid eq $voo[pid]">class="active"</if>>
+                                    <a href="__APP__/{$voo.url}">{$voo.title}</a>
+                                </li>
+								</volist>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+						</volist>
+                        
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->

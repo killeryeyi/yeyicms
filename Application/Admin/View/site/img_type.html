@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title> 详情页</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="__PUBLIC__/assets/css/dpl-min.css" rel="stylesheet" type="text/css"/>
+    <link href="__PUBLIC__/assets/css/bui-min.css" rel="stylesheet" type="text/css"/>
+    <link href="__PUBLIC__/assets/css/page-min.css" rel="stylesheet" type="text/css"/>
+    <!-- 下面的样式，仅是为了显示代码，而不应该在项目中使用-->
+    <link href="__PUBLIC__/assets/css/prettify.css" rel="stylesheet" type="text/css"/>
+    <style type="text/css">
+        code {
+            padding: 0px 4px;
+            color: #d14;
+            background-color: #f7f7f9;
+            border: 1px solid #e1e1e8;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="detail-page">
+        <a href="__APP__/site/add_imgtype"><button type="button" class="button button-small"><i class="icon-plus"></i>添加分类</button></a>
+        <div class="detail-section" style="margin-top: 10px">
+            <h3>图片分类列表</h3>
+            <div class="row detail-row">
+                <div class="span24">
+                    <div id="grid">
+                        <div class="bui-simple-grid bui-simple-list bui-grid-border" aria-disabled="false"
+                             aria-pressed="false" style="width: 950px;">
+                            <table cellspacing="0" class="bui-grid-table" cellpadding="0">
+                                <thead>
+                                <tr>
+                                    <th class="bui-grid-hd " width="200">
+                                        <div class="bui-grid-hd-inner"><span class="bui-grid-hd-title">分类名称</span></div>
+                                    </th>
+
+                                    <th class="bui-grid-hd " width="100">
+                                        <div class="bui-grid-hd-inner"><span class="bui-grid-hd-title">操作</span>
+                                        </div>
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <volist  name="list" id="vo">
+                                <tr class="bui-grid-row bui-grid-row-odd">
+
+                                    <td class="bui-grid-cell ">
+                                        <div class="bui-grid-cell-inner"><span class="bui-grid-cell-text">{$vo.name}</span>
+                                        </div>
+                                    </td>
+                                    <td class="bui-grid-cell ">
+                                        <div class="bui-grid-cell-inner"><span class="bui-grid-cell-text"><a href="__APP__/site/edit_imgtype/id/{$vo.id}">修改</a> <a href="__APP__/site/del_imgtype/id/{$vo.id}">删除</a></span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                    <volist  name="vo['c']" id="v">
+                                        <tr class="bui-grid-row bui-grid-row-odd">
+                                            <td class="bui-grid-cell ">
+                                                <div class="bui-grid-cell-inner"><span class="bui-grid-cell-text">&nbsp;&nbsp;&nbsp;&nbsp;∟{$v.name}</span>
+                                                </div>
+                                            </td>
+                                            <td class="bui-grid-cell ">
+                                                <div class="bui-grid-cell-inner"><span class="bui-grid-cell-text"><a href="__APP__/site/edit_imgtype/id/{$v.id}">修改</a> <a href="__APP__/site/del_imgtype/id/{$v.id}">删除</a></span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </volist >
+                                </volist >
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<body>
+</html>  

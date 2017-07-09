@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title> 详情页</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="__PUBLIC__/assets/css/dpl-min.css" rel="stylesheet" type="text/css"/>
+    <link href="__PUBLIC__/assets/css/bui-min.css" rel="stylesheet" type="text/css"/>
+    <link href="__PUBLIC__/assets/css/page-min.css" rel="stylesheet" type="text/css"/>
+    <!-- 下面的样式，仅是为了显示代码，而不应该在项目中使用-->
+    <link href="__PUBLIC__/assets/css/prettify.css" rel="stylesheet" type="text/css"/>
+    <style type="text/css">
+        code {
+            padding: 0px 4px;
+            color: #d14;
+            background-color: #f7f7f9;
+            border: 1px solid #e1e1e8;
+        }
+        .page .current,.page a,.page a:hover,.page span{display:inline-block;margin-right:2px;padding:0 10px;height:25px;line-height:25px;vertical-align:middle}
+        .page a,.page span{color:#404548;border:1px solid #D7DBDC;background-color:#F6FFFF}
+        .page .current,.page a:hover{text-decoration:none;color:#FFF;background-color:#337ab7;vertical-align:middle}
+        .page .next,.page .prev{font-family:"宋体"}
+        .page {text-align: center}
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+
+    <div class="detail-page">
+        <a href="__APP__/article/add_article"><button type="button" class="button button-small"><i class="icon-plus"></i>添加文章</button></a>
+        <div class="detail-section" style="margin-top: 10px">
+            <div class="row">
+                <form id="searchForm" class="form-horizontal span24 bui-form-horizontal bui-form bui-form-field-container" aria-disabled="false" method="post" action="__APP__/article/index" aria-pressed="false">
+                    <div class="row">
+                        <div class="control-group span8">
+                            <label class="control-label">所属栏目：</label>
+                            <div class="controls">
+                                <select name="pid" class="bui-form-field-select bui-form-field" aria-disabled="false" aria-pressed="false">
+                                    <option value="0">顶级栏目</option>
+                                    <foreach name="menu" item="vo">
+                                        <option value="{$vo.id}" <if condition="$pid eq $vo['id']">selected="selected"</if>>{$vo.name}</option>
+                                        <volist  name="vo['c']" id="v">
+                                            <option value="{$v.id}" <if condition="$pid eq $v['id']">selected="selected"</if>>&nbsp;&nbsp;&nbsp;&nbsp;∟{$v.name}</option>
+                                        </volist>
+                                    </foreach>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="control-group span8">
+                            <label class="control-label">文章标题：</label>
+                            <div class="controls">
+                                <input type="text" class="control-text bui-form-field" name="title" aria-disabled="false" aria-pressed="false" value="{$title}">
+                            </div>
+                        </div>
+                        <div class="span3 offset2">
+                            <button type="submit" id="btnSearch" class="button button-primary">搜索</button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+            <h3>文章列表</h3>
+            <div class="row detail-row">
+                <div class="span24">
+                    <div id="grid">
+                        <div class="bui-simple-grid bui-simple-list bui-grid-border" aria-disabled="false"
+                             aria-pressed="false" style="width: 950px;">
+                            <table cellspacing="0" class="bui-grid-table" cellpadding="0">
+                                <thead>
+                                <tr>
+                                    <th class="bui-grid-hd " width="50">
+                                        <div class="bui-grid-hd-inner"><span class="bui-grid-hd-title">id</span></div>
+                                    </th>
+                                    <th class="bui-grid-hd " width="200">
+                                        <div class="bui-grid-hd-inner"><span class="bui-grid-hd-title">文章标题</span></div>
+                                    </th>
+                                    <th class="bui-grid-hd " width="100">
+                                        <div class="bui-grid-hd-inner"><span class="bui-grid-hd-title">所属栏目</span></div>
+                                    </th>
+
+                                    <th class="bui-grid-hd " width="100">
+                                        <div class="bui-grid-hd-inner"><span class="bui-grid-hd-title">作者</span></div>
+                                    </th>
+                                    <th class="bui-grid-hd " width="100">
+                                        <div class="bui-grid-hd-inner"><span class="bui-grid-hd-title">是否显示</span>
+                                        </div>
+                                    </th>
+                                    <th class="bui-grid-hd " width="100">
+                                        <div class="bui-grid-hd-inner"><span class="bui-grid-hd-title">是否推荐</span>
+                                        </div>
+                                    </th>
+                                    <th class="bui-grid-hd " width="100">
+                                        <div class="bui-grid-hd-inner"><span class="bui-grid-hd-title">发布时间</span>
+                                        </div>
+                                    </th>
+                                    <th class="bui-grid-hd " width="150">
+                                        <div class="bui-grid-hd-inner"><span class="bui-grid-hd-title">操作</span>
+                                        </div>
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <foreach name="list" item="vo">
+                                <tr class="bui-grid-row bui-grid-row-odd">
+                                    <td class="bui-grid-cell ">
+                                        <div class="bui-grid-cell-inner"><span class="bui-grid-cell-text">{$vo.id}</span>
+                                        </div>
+                                    </td>
+                                    <td class="bui-grid-cell ">
+                                        <div class="bui-grid-cell-inner"><span class="bui-grid-cell-text">{$vo.title}</span>
+                                        </div>
+                                    </td>
+                                    <td class="bui-grid-cell ">
+                                        <div class="bui-grid-cell-inner"><span class="bui-grid-cell-text">{$vo.name}</span>
+                                        </div>
+                                    </td>
+                                    <td class="bui-grid-cell ">
+                                        <div class="bui-grid-cell-inner"><span class="bui-grid-cell-text">{$vo.author}</span></div>
+                                    </td>
+                                    <td class="bui-grid-cell ">
+                                        <div class="bui-grid-cell-inner"><span class="bui-grid-cell-text"><if condition="$vo.status eq 1">显示<else/>隐藏</if></span>
+                                        </div>
+                                    </td>
+                                    <td class="bui-grid-cell ">
+                                        <div class="bui-grid-cell-inner"><span class="bui-grid-cell-text"><if condition="$vo.recommend eq 1">是<else/>否</if></span>
+                                        </div>
+                                    </td>
+                                    <td class="bui-grid-cell ">
+                                        <div class="bui-grid-cell-inner"><span class="bui-grid-cell-text">{$vo.create_time|date='Y-m-d',###}</span>
+                                        </div>
+                                    </td>
+                                    <td class="bui-grid-cell ">
+                                        <div class="bui-grid-cell-inner"><span class="bui-grid-cell-text"><a href="__APP__/article/edit_article/id/{$vo.id}">修改</a> <a href="__APP__/article/del_article/id/{$vo.id}">删除</a></span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </foreach>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page">{$page}</div>
+        </div>
+    </div>
+</div>
+
+
+<body>
+</html>  
