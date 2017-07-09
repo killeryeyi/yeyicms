@@ -1,2 +1,0 @@
-# yeyicms
-yeyicms
