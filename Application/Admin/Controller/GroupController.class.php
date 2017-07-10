@@ -22,7 +22,6 @@ class GroupController extends GlobalController
         //dump($this->tree_node($list)[0]);
         $this->assign('list', $list);// 赋值数据集
         $this->assign('page', $show);// 赋值分页输出
-        $this->assign('name', '角色列表');
         $this->display(); // 输出模板
     }
 
@@ -31,7 +30,6 @@ class GroupController extends GlobalController
      * */
     public function add_group()
     {
-        $this->assign('name', '添加角色');
         if ($_POST) {
             if(I("name", "", trim)==""){
                 $this->error("角色名称不能为空！");
@@ -65,7 +63,6 @@ class GroupController extends GlobalController
     public function edit_group()
     {
         $id = I("id", "", intval);
-        $this->assign('name', '角色修改');
         if ($_POST) {
             if(I("name", "", trim)==""){
                 $this->error("角色名称不能为空！");

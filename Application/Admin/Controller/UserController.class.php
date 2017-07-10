@@ -31,7 +31,6 @@ class UserController extends GlobalController
         }
         $this->assign('list', $list);// 赋值数据集
         $this->assign('page', $show);// 赋值分页输出
-        $this->assign('name', '管理员列表');
         $this->display(); // 输出模板
     }
 
@@ -41,7 +40,6 @@ class UserController extends GlobalController
     public function edit_user()
     {
         $id = I("id", intval);
-        $this->assign('name', '管理员修改');
         if ($_POST) {
             //不修改密码时提交的信息
             if (I("pass") == "" && I("newpass") == "" && I("rnewpass") == "") {
@@ -97,7 +95,6 @@ class UserController extends GlobalController
      * */
     public function add_user()
     {
-        $this->assign('name', '添加管理员');
         if ($_POST) {
             if (I("name", "", trim)=="") {
                 $this->error("用户名不能为空！");

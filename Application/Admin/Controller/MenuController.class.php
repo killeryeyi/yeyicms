@@ -25,7 +25,6 @@ class MenuController extends GlobalController
         //dump($this->tree_node($list)[0]);
         $this->assign('list', $list);// 赋值数据集
         $this->assign('page', $show);// 赋值分页输出
-        $this->assign('name', '菜单列表');
         $this->display(); // 输出模板
     }
 
@@ -63,7 +62,6 @@ class MenuController extends GlobalController
             $node = M("admin_rule")->select();
             $menu_list = $this->tree_node($node);
             $this->assign("menu_list", $menu_list);
-            $this->assign('name', '添加菜单');
             $this->display();
         }
 
@@ -127,7 +125,6 @@ class MenuController extends GlobalController
             $c = M("admin_rule")->where(array('id' => $id))->find();
             $this->assign('info', $c);
             $this->assign("menu_list", $menu_list);
-            $this->assign('name', '修改菜单');
             $this->display();
         }
     }

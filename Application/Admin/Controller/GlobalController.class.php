@@ -97,7 +97,7 @@ class GlobalController extends Controller
             $url = strtolower($url);
             if ($url != "index/index") {
                 //判断url是否存在
-                $rule=M("admin_rule")->field("id,pid")->where(array('url'=>$url))->find();
+                $rule=M("admin_rule")->field("id,pid,title")->where(array('url'=>$url))->find();
                 if($rule){
                     //判断是否有权限
                     if (!in_array($rule['id'], $arr)) {
@@ -105,6 +105,7 @@ class GlobalController extends Controller
                     }
                     $this->assign("id",$rule['id']);
                     $this->assign("pid",$rule['pid']);
+                    $this->assign("name",$rule['title']);
                 }else{
                     $this->error("不存在的链接！");
                 }
