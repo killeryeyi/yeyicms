@@ -1,0 +1,299 @@
+[ 2017-07-12T16:58:43+08:00 ] ::1 /yeyicms/admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-07-12T16:58:58+08:00 ] ::1 /yeyicms/admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `rt_admin` [ RunTime:0.2040s ]
+SQL: SELECT * FROM `rt_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `rt_admin_group` [ RunTime:0.0670s ]
+SQL: SELECT * FROM `rt_admin_group` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rt_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rt_admin_group` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `rt_admin_rule` [ RunTime:0.1170s ]
+SQL: SELECT * FROM `rt_admin_rule` WHERE ( id in(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,36,22,23,24,25,35,26,27,28,29,30,33,34) and status=0 ) ORDER BY sort asc  [ RunTime:0.0000s ]
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' D:\phpstudy\WWW\yeyicms\Application\Admin\Controller\GlobalController.class.php 第 25 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant userid - assumed 'userid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 250 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 274 行.
+NOTIC: [8] Undefined variable: pid D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 274 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 274 行.
+NOTIC: [8] Undefined variable: pid D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 274 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 274 行.
+NOTIC: [8] Undefined variable: pid D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 274 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 274 行.
+NOTIC: [8] Undefined variable: pid D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 274 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 274 行.
+NOTIC: [8] Undefined variable: pid D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 274 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 274 行.
+NOTIC: [8] Undefined variable: pid D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 274 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 274 行.
+NOTIC: [8] Undefined variable: pid D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 274 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 274 行.
+NOTIC: [8] Undefined variable: pid D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 274 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 274 行.
+NOTIC: [8] Undefined variable: pid D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 274 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 274 行.
+NOTIC: [8] Undefined variable: pid D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 274 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-12T16:59:08+08:00 ] ::1 /yeyicms/admin.php/menu/m_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `rt_admin` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `rt_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `rt_admin_group` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `rt_admin_group` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `rt_admin_rule` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`pid`,`title` FROM `rt_admin_rule` WHERE `url` = 'menu/m_list' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rt_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `rt_admin_group` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rt_admin_rule` WHERE ( id in(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,36,22,23,24,25,35,26,27,28,29,30,33,34) and status=0 ) ORDER BY sort asc  [ RunTime:0.0000s ]
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' D:\phpstudy\WWW\yeyicms\Application\Admin\Controller\GlobalController.class.php 第 25 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `rt_admin_rule` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rt_admin_rule` ORDER BY id LIMIT 0,15   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant userid - assumed 'userid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 250 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 274 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 274 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 274 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 274 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 274 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 274 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 274 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 274 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 274 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 274 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 327 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 329 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 330 行.
+NOTIC: [8] Undefined index: last D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 333 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 327 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 329 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 330 行.
+NOTIC: [8] Undefined index: last D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 333 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 327 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 329 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 330 行.
+NOTIC: [8] Undefined index: last D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 333 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 327 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 329 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 330 行.
+NOTIC: [8] Undefined index: last D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 333 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 327 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 329 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 330 行.
+NOTIC: [8] Undefined index: last D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 333 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 327 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 329 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 330 行.
+NOTIC: [8] Undefined index: last D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 333 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 327 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 329 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 330 行.
+NOTIC: [8] Undefined index: last D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 333 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 327 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 329 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 330 行.
+NOTIC: [8] Undefined index: last D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 333 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 327 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 329 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 330 行.
+NOTIC: [8] Undefined index: last D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 333 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 327 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 329 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 330 行.
+NOTIC: [8] Undefined index: last D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 333 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 327 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 329 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 330 行.
+NOTIC: [8] Undefined index: last D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 333 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 327 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 329 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 330 行.
+NOTIC: [8] Undefined index: last D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 333 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 327 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 329 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 330 行.
+NOTIC: [8] Undefined index: last D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 333 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 327 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 329 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 330 行.
+NOTIC: [8] Undefined index: last D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 333 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 327 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 329 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 330 行.
+NOTIC: [8] Undefined index: last D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\f561a1e29d1c7da26a19b67d3d28fe8a.php 第 333 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-12T16:59:19+08:00 ] ::1 /yeyicms/admin.php/group/g_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `rt_admin` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `rt_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `rt_admin_group` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `rt_admin_group` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `rt_admin_rule` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`pid`,`title` FROM `rt_admin_rule` WHERE `url` = 'group/g_list' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `rt_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rt_admin_group` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rt_admin_rule` WHERE ( id in(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,36,22,23,24,25,35,26,27,28,29,30,33,34) and status=0 ) ORDER BY sort asc  [ RunTime:0.0010s ]
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' D:\phpstudy\WWW\yeyicms\Application\Admin\Controller\GlobalController.class.php 第 25 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `rt_admin_group` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rt_admin_group` ORDER BY id LIMIT 0,15   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant userid - assumed 'userid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\319232a5abf2e2de24370d9c6a1bf7e2.php 第 250 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\319232a5abf2e2de24370d9c6a1bf7e2.php 第 274 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\319232a5abf2e2de24370d9c6a1bf7e2.php 第 274 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\319232a5abf2e2de24370d9c6a1bf7e2.php 第 274 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\319232a5abf2e2de24370d9c6a1bf7e2.php 第 274 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\319232a5abf2e2de24370d9c6a1bf7e2.php 第 274 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\319232a5abf2e2de24370d9c6a1bf7e2.php 第 274 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\319232a5abf2e2de24370d9c6a1bf7e2.php 第 274 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\319232a5abf2e2de24370d9c6a1bf7e2.php 第 274 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\319232a5abf2e2de24370d9c6a1bf7e2.php 第 274 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\319232a5abf2e2de24370d9c6a1bf7e2.php 第 274 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\319232a5abf2e2de24370d9c6a1bf7e2.php 第 321 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\319232a5abf2e2de24370d9c6a1bf7e2.php 第 322 行.
+NOTIC: [8] Undefined index: last D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\319232a5abf2e2de24370d9c6a1bf7e2.php 第 325 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\319232a5abf2e2de24370d9c6a1bf7e2.php 第 321 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\319232a5abf2e2de24370d9c6a1bf7e2.php 第 322 行.
+NOTIC: [8] Undefined index: last D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\319232a5abf2e2de24370d9c6a1bf7e2.php 第 325 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\319232a5abf2e2de24370d9c6a1bf7e2.php 第 321 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\319232a5abf2e2de24370d9c6a1bf7e2.php 第 322 行.
+NOTIC: [8] Undefined index: last D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\319232a5abf2e2de24370d9c6a1bf7e2.php 第 325 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-12T16:59:23+08:00 ] ::1 /yeyicms/admin.php/user/u_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `rt_admin` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `rt_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `rt_admin_group` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `rt_admin_group` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `rt_admin_rule` [ RunTime:0.0150s ]
+SQL: SELECT `id`,`pid`,`title` FROM `rt_admin_rule` WHERE `url` = 'user/u_list' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rt_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rt_admin_group` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rt_admin_rule` WHERE ( id in(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,36,22,23,24,25,35,26,27,28,29,30,33,34) and status=0 ) ORDER BY sort asc  [ RunTime:0.0010s ]
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' D:\phpstudy\WWW\yeyicms\Application\Admin\Controller\GlobalController.class.php 第 25 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `rt_admin` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rt_admin` ORDER BY id LIMIT 0,15   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `rt_admin_group`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant userid - assumed 'userid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\31606c951241bf72fd38eb69c047051e.php 第 250 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\31606c951241bf72fd38eb69c047051e.php 第 274 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\31606c951241bf72fd38eb69c047051e.php 第 274 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\31606c951241bf72fd38eb69c047051e.php 第 274 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\31606c951241bf72fd38eb69c047051e.php 第 274 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\31606c951241bf72fd38eb69c047051e.php 第 274 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\31606c951241bf72fd38eb69c047051e.php 第 274 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\31606c951241bf72fd38eb69c047051e.php 第 274 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\31606c951241bf72fd38eb69c047051e.php 第 274 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\31606c951241bf72fd38eb69c047051e.php 第 274 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\31606c951241bf72fd38eb69c047051e.php 第 274 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\31606c951241bf72fd38eb69c047051e.php 第 329 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\31606c951241bf72fd38eb69c047051e.php 第 329 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\31606c951241bf72fd38eb69c047051e.php 第 330 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\31606c951241bf72fd38eb69c047051e.php 第 329 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\31606c951241bf72fd38eb69c047051e.php 第 330 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-12T16:59:29+08:00 ] ::1 /yeyicms/admin.php/article/add_article
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `rt_admin` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `rt_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `rt_admin_group` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `rt_admin_group` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `rt_admin_rule` [ RunTime:0.0160s ]
+SQL: SELECT `id`,`pid`,`title` FROM `rt_admin_rule` WHERE `url` = 'article/add_article' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rt_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rt_admin_group` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `rt_admin_rule` WHERE ( id in(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,36,22,23,24,25,35,26,27,28,29,30,33,34) and status=0 ) ORDER BY sort asc  [ RunTime:0.0000s ]
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' D:\phpstudy\WWW\yeyicms\Application\Admin\Controller\GlobalController.class.php 第 25 行.
+SQL: SHOW COLUMNS FROM `rt_menu` [ RunTime:1.2621s ]
+SQL: SELECT * FROM `rt_menu` WHERE `pid` = 0 AND `single_page` = 2  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `rt_menu` WHERE ( pid>0 and single_page=2 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: info D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\8263f5c139401f3e7bf81fda6e018162.php 第 48 行.
+NOTIC: [8] Undefined variable: info D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\8263f5c139401f3e7bf81fda6e018162.php 第 56 行.
+NOTIC: [8] Undefined variable: info D:\phpstudy\WWW\yeyicms\Application\Runtime\Cache\Admin\8263f5c139401f3e7bf81fda6e018162.php 第 90 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

@@ -33,23 +33,23 @@ class MenuController extends GlobalController
     {
         if ($_POST) {
             //判断菜单名称是否为空
-            if(I("title", trim)==""){
+            if(I("title","", trim)==""){
                 $this->error("菜单标题不能为空");
             }
-            if(I("url", trim)==""){
+            if(I("url","", trim)==""){
                 $this->error("url不能为空");
             }
             //判断url标识是否存在
-            $url = M("admin_rule")->where(array('url' => I("url", trim)))->find();
+            $url = M("admin_rule")->where(array('url' => I("url","", trim)))->find();
             if ($url) {
                 $this->error("url已经存在");
             }
-            $data['pid'] = I("pid", intval) ? I("pid", intval) : 0;
-            $data['url'] = I("url", trim);
-            $data['title'] = I("title", trim);
-            $data['level'] = I("level", intval);
-            $data['sort'] = I("sort", intval);
-            $data['status'] = I("status", intval);
+            $data['pid'] = I("pid", "",intval) ? I("pid","", intval) : 0;
+            $data['url'] = I("url", "",trim);
+            $data['title'] = I("title", "",trim);
+            $data['level'] = I("level","", intval);
+            $data['sort'] = I("sort","", intval);
+            $data['status'] = I("status","", intval);
             $data['update_time'] = time();
             $id = M("admin_rule")->add($data);
             if ($id) {
@@ -71,7 +71,7 @@ class MenuController extends GlobalController
     //删除菜单
     public function m_del()
     {
-        $id = I("id", intval);
+        $id = I("id", "",intval);
         $pid = M("admin_rule")->where(array('pid' => $id))->find();
         if ($pid) {
             $this->error("请先删除子栏目！");
@@ -89,17 +89,17 @@ class MenuController extends GlobalController
     //修改菜单
     public function m_edit()
     {
-        $id = I("id", intval);
+        $id = I("id", "",intval);
         if ($_POST) {
-            $data['pid'] = I("pid", intval);
-            $data['url'] = I("url", trim);
-            $data['title'] = I("title", trim);
-            $data['level'] = I("level", intval);
-            $data['sort'] = I("sort", intval);
-            $data['status'] = I("status", intval);
+            $data['pid'] = I("pid", "",intval);
+            $data['url'] = I("url","", trim);
+            $data['title'] = I("title","", trim);
+            $data['level'] = I("level","", intval);
+            $data['sort'] = I("sort","", intval);
+            $data['status'] = I("status","", intval);
             $data['update_time'] = time();
 
-            $url1 = I("url1", trim);
+            $url1 = I("url1", "",trim);
             //判断url标识是否存在
             if ($data['url'] != $url1) {
                 $url = M("admin_rule")->where(array('url' => $data['url']))->find();

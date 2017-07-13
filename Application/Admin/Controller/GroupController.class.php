@@ -99,7 +99,7 @@ class GroupController extends GlobalController
     //删除角色
     public function del_group()
     {
-        $id = I("id", intval);
+        $id = I("id","", intval);
         $cid = M("admin_group")->where(array('id' => $id))->delete();
         if ($cid) {
             $this->success("删除成功！", U("group/g_list"));

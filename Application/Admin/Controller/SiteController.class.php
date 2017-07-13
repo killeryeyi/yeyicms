@@ -106,7 +106,7 @@ class SiteController extends GlobalController
             $info['url']=I("url",'',trim);
             $info['type']=I("pid",'',trim);
             $info['img']=$info['photo']['savepath'].$info['photo']['savename'];
-            $info['sort']=I("sort",intval);
+            $info['sort']=I("sort","",intval);
             $info['create_time']=time();
             $id=M("banner")->add($info);
             if($id){
@@ -170,7 +170,7 @@ class SiteController extends GlobalController
             }
             $info['type']=I("pid",'',trim);
             $info['url']=I("url",'',trim);
-            $info['sort']=I("sort",intval);
+            $info['sort']=I("sort","",intval);
             $info['create_time']=time();
             $cid=M("banner")->where(array('id'=>$id))->save($info);
             if($cid){

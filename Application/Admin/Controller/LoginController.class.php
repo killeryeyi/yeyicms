@@ -18,7 +18,7 @@ class LoginController extends Controller
     public function login()
     {
         //检测账户是否存在
-        $user = M("admin")->where(array('username' => I("user", trim)))->find();
+        $user = M("admin")->where(array('username' => I("user","", trim)))->find();
         if ($user) {
             //判断密码是否正确
             if ($user['password'] != I("pass", '', md5)) {

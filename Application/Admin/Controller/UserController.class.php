@@ -39,7 +39,7 @@ class UserController extends GlobalController
      * */
     public function edit_user()
     {
-        $id = I("id", intval);
+        $id = I("id", "",intval);
         if ($_POST) {
             //不修改密码时提交的信息
             if (I("pass") == "" && I("newpass") == "" && I("rnewpass") == "") {
