@@ -6,25 +6,30 @@ use Think\Controller;
 
 class GlobalController extends Controller
 {
+    private $not_check=array('index/index');//不需要判断权限的链接
     public function __construct()
     {
         parent::__construct();
         if (!$this->islogin()) {
             $this->redirect('Login/index');
+        }else{
+            //获取用户名
+            $username = $_SESSION['user_id'];
+            //获取用户角色信息
+            $rule = $this->admin_rule();
+            if($rule['node']!=""){
+                //获取当前登录用户可访问的菜单
+                $node = M("admin_rule")->where("id in({$rule['node']}) and status=0")->order("sort asc")->select();
+                $menu = $this->tree_node($node);
+                //添加左侧栏目图标样式
+                $this->assign("icon", C(icon));
+                $this->assign("menu", $menu);
+            }
+            $this->assign("username", $username);
         }
         $this->check_rule();
 
-        //获取用户名
-        $username = $_SESSION['user_id'];
-        //获取用户角色信息
-        $rule = $this->admin_rule();
-        //获取当前登录用户可访问的菜单
-        $node = M("admin_rule")->where("id in({$rule['node']}) and status=0")->order("sort asc")->select();
-        $menu = $this->tree_node($node);
-        //添加左侧栏目图标样式
-        $this->assign("icon", C(icon));
-        $this->assign("menu", $menu);
-        $this->assign("username", $username);
+
     }
 
     /*
@@ -64,7 +69,7 @@ class GlobalController extends Controller
     * */
     public function admin_rule()
     {
-        $user = M("admin")->where(array('id' => $_SESSION['user_id']['userid']))->find();
+        $user = M("admin")->where(array('id' => $_SESSION['user_id']['id']))->find();
         $list = M("admin_group")->where(array('id' => $user['group_id']))->find();
         return $list;
     }
@@ -93,9 +98,8 @@ class GlobalController extends Controller
         if ($list) {
             $arr = explode(",", $list['node']);
             //获取当前控制器名称和方法名称
-            $url = CONTROLLER_NAME . "/" . ACTION_NAME;
-            $url = strtolower($url);
-            if ($url != "index/index") {
+            $url = strtolower(CONTROLLER_NAME . "/" . ACTION_NAME);
+            if (!in_array($url,$this->not_check)) {
                 //判断url是否存在
                 $rule=M("admin_rule")->field("id,pid,title")->where(array('url'=>$url))->find();
                 if($rule){
