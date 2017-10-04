@@ -1,104 +1,101 @@
 <include file="Public:header"/>
+
 <body>
 
-<div id="wrapper">
+    <div id="wrapper">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-        <include file="Public:top"/>
-        <include file="Public:menu"/>
-    </nav>
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <include file="Public:top" />
+            <include file="Public:menu" />
+        </nav>
 
-    <div id="page-wrapper">
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">{$name}</h1>
-            </div>
-            <!-- /.col-lg-12 -->
-        </div>
-        <!-- /.row -->
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        列表
-                    </div>
-                    <!-- /.panel-heading -->
-                    <div class="panel-body">
-                        
-						<div class="col-lg-6">
-                                    <form role="form" method="post" action="{:U('Menu/m_edit')}">
-                                        <div class="form-group">
-                                            <label>标题</label>
-                                            <input class="form-control" type="text" name="title" value="{$info.title}">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>url</label>
-                                            <input class="form-control" type="text" name="url" value="{$info.url}">
-											<input class="form-control" type="hidden" name="url1" value="{$info.url}">
-											<p class="help-block">index/index</p>
-                                        </div>
-										<div class="form-group">
-                                            <label>上级菜单</label>
-                                            <select multiple="" class="form-control" name="pid">
-											<option value="0"<if condition="$info[pid] eq 0">selected</if>>顶级</option>
-											<volist name="menu_list" id="vo">
-                                                <option value="{$vo.id}" <if condition="$info[pid] eq $vo[id]">selected</if>>{$vo.title}</option>
-												<volist name="vo['last']" id="voo">
-                                                <option value="{$voo.id}" <if condition="$info[pid] eq $voo[id]">selected</if>>&nbsp;&nbsp;——{$voo.title}</option>
-												</volist>
-											</volist>
-                                              
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>等级</label>
-                                            <select class="form-control" name="level">
-                                                <option value="1" <if condition="$info[level] eq 1">selected</if>>一级</option>
-                                                <option value="2" <if condition="$info[level] eq 2">selected</if>>二级</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>排序</label>
-                                            <input class="form-control" type="text" name="sort" value="{$info.sort}">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>状态</label>
-                                            <div class="radio">
-                                                <label>
-                                                    <input type="radio" name="status" id="optionsRadios1" value="0" <if condition="$info[status] eq 0">checked="true"</if>>显示
-                                                </label>
-												<label>
-                                                    <input type="radio" name="status" id="optionsRadios1" value="1" <if condition="$info[status] eq 1">checked="true"</if>>隐藏
-                                                </label>
-                                            </div>
-                                           
-                                        </div>
-                                       
-                                        <input class="form-control" type="hidden" name="id" value="{$info.id}">
-                                        <button type="submit" class="btn btn-default">提交</button>
-                                        <button type="reset" class="btn btn-default">重置</button>
-                                    </form>
-                                </div>
-                        
-                    </div>
-                    <!-- /.panel-body -->
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">{$name}</h1>
                 </div>
-                <!-- /.panel -->
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+
+                            <div class="col-lg-6">
+                                <form role="form" method="post" action="{:U('Menu/m_edit')}">
+                                    <div class="form-group">
+                                        <label>标题</label>
+                                        <input class="form-control" type="text" name="title" value="{$info.title}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>url</label>
+                                        <input class="form-control" type="text" name="url" value="{$info.url}">
+                                        <p class="help-block">index/index</p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>上级菜单</label>
+                                        <select class="form-control" name="pid">
+                                            <option value="0"<if condition="$info[pid] eq 0">selected</if>>顶级</option>
+                                            <volist name="menu_list" id="vo">
+                                                <option value="{$vo.id}" <if condition="$info[pid] eq $vo[id]">selected</if>>{$vo.title}</option>
+                                                <volist name="vo['last']" id="voo">
+                                                    <option value="{$voo.id}" <if condition="$info[pid] eq $voo[id]">selected</if>>&nbsp;&nbsp;——{$voo.title}</option>
+                                                </volist>
+                                            </volist>
+
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>等级</label>
+                                        <select class="form-control se" name="level">
+                                            <option value="1" <if condition="$info[level] eq 1">selected</if>>一级</option>
+                                            <option value="2" <if condition="$info[level] eq 2">selected</if>>二级</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>排序</label>
+                                        <input class="form-control" type="text" name="sort" value="{$info.sort}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>状态</label>
+                                        <div >
+                                            <label>
+                                                <input type="radio" name="status" id="optionsRadios1" value="0" <if condition="$info[status] eq 0">checked="true"</if>>显示
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="status" id="optionsRadios2" value="1" <if condition="$info[status] eq 1">checked="true"</if>>隐藏
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+                                    <input class="form-control" type="hidden" name="id" value="{$info.id}">
+                                    <button type="submit" class="btn btn-default">提交</button>
+                                    <button type="reset" class="btn btn-default">重置</button>
+                                </form>
+                            </div>
+
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+
+                </div>
+                <!-- /.col-lg-12 -->
 
             </div>
-            <!-- /.col-lg-12 -->
-
+            <!-- /.row -->
         </div>
-        <!-- /.row -->
+        <!-- /#page-wrapper -->
 
     </div>
-    <!-- /#page-wrapper -->
+    <!-- /#wrapper -->
+    <include file="Public:footer"/>
 
-</div>
-<!-- /#wrapper -->
-
-<include file="Public:footer"/>
 
 </body>
 

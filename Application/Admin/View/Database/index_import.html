@@ -1,0 +1,146 @@
+<include file="Public:header"/>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <include file="Public:top" />
+            <include file="Public:menu" />
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">{$name}</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                          数据库列表
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <form name="myform" id="myform" method="post">
+                            <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                <thead>
+                                <tr>
+                                    <th>备份名称</th>
+                                    <th>文件大小</th>
+                                    <th>备份时间</th>
+                                    <th>操作</th>
+                                    <!-- <th>操作</th>-->
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <volist name="data" id="datalist">
+                                <tbody>
+                                <td>{$datalist.basename}</td>
+                                <td>{$datalist.size|format_bytes}</td>
+                                <td>{$datalist.create_time|date='Y-m-d H:i:s',###}</td>
+                                <td>
+                                    <a class="link-importsql edit" href="javascript:;"  onclick="importsql('{:U('importsql')}','{$datalist.basename}')">还原</a>
+                                    <!-- <a class="link-downsql edit" href="__ROOT__/Uploads/data/{$datalist.basename}" download="{$datalist.basename}">下载</a>-->
+                                    <a class="link-del edit" href="javascript:;" onclick="del('{:U('del')}','{$datalist.basename}')" >删除</a>
+                                </td>
+                                </tbody>
+                                </volist>
+
+                                </tbody>
+                            </table>
+                            </form>
+                        </div>
+                        <!-- /.panel-body -->
+
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="dataTables_paginate paging_simple_numbers" id="dataTables-example_paginate">
+                        <ul class="pagination">
+                            {$page}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <include file="Public:footer"/>
+
+    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+    <script type="text/javascript">
+        /**
+         * [importsql 删除函数]
+         * @param  {[string]} url [处理数据的url地址]
+         * @param  {[string]} ids [数据的id字符串]
+         * @return {[json]}       [返回json格式]
+         */
+        function importsql(url,senddata){
+            layer.confirm('确定要还原数据？如果数据量大的话，花费的时间将会比较长，请耐心等待！',{icon:3},function(index){
+                layer.close(index);
+                postUrl(url,senddata);
+            });
+        }
+        function del(url,ids,otherData){
+            parent.layer.confirm('确定要删除数据？',{icon:3},function(index){
+                $.post(url,{id:ids,other:otherData}, function(data, textStatus, xhr) {
+                    //返回消息
+                    if(data.status){
+                        parent.layer.msg(data.info,{icon:1,time:2000,shade: [0.3,'#000']},function(){
+                            location.reload();
+                        });
+                    } else {
+                        parent.layer.open({
+                            content:data.info,
+                            yes:function(index){
+                                parent.layer.close(index);
+                            },
+                            icon:2
+                        });
+                        //layer.msg(data.info,{icon:2});
+                    }
+
+                });
+            });
+        }
+        function postUrl(url,sendData){
+            layer.load(1);
+            $.post(url, {data:sendData}, function(data){
+                //弹出消息
+                if(data.status){
+                    layer.msg(data.info,{icon:1,time:2000,shade: [0.3,'#000']},function(){
+                        if(data.url){
+                            location.href = data.url;
+                        } else {
+                            location.reload();
+                        }
+                    });
+                } else {
+                    layer.open({
+                        content:data.info,
+                        yes:function(index){
+                            layer.close(index);
+                        },
+                        icon:2
+                    });
+                    layer.closeAll('loading');
+                    //layer.msg(data.info,{icon:2});
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

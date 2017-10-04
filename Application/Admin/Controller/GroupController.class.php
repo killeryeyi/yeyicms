@@ -38,20 +38,15 @@ class GroupController extends GlobalController
             $info['node'] = implode(",", I("mid", "", intval));
             $id = M("admin_group")->add($info);
             if ($id) {
+                $this->admin_log("名称:".$info['name']);
                 $this->success("添加成功！", U("group/g_list"));
             } else {
                 $this->error("添加失败！");
             }
         } else {
-            $rule = M("admin_rule")->where(array("pid" => 0))->select();
-            $rule1 = M("admin_rule")->where("pid>0")->select();
-            foreach ($rule1 as $key => $vo) {
-                $arr[$vo['pid']][$key] = $vo;
-            }
-            foreach ($rule as $key => $vo) {
-                $rule[$key]['second'] = $arr[$vo['id']];
-            }
-            $this->assign("rule", $rule);
+            $rule = M("admin_rule")->order("sort asc")->select();
+            $rule_data = $this->tree_node($rule);//递归循环
+            $this->assign("rule", $rule_data);
             $this->display();
         }
 
@@ -71,12 +66,13 @@ class GroupController extends GlobalController
             $info['node'] = implode(",", I("mid", "", intval));
             $id = M("admin_group")->where(array('id' => $id))->save($info);
             if ($id) {
+                $this->admin_log("名称:".$info['name']);
                 $this->success("修改成功！", U("group/g_list"));
             } else {
                 $this->error("修改失败！");
             }
         } else {
-            $rule = M("admin_rule")->select();
+            $rule = M("admin_rule")->order("sort asc")->select();
             $rule_data = $this->tree_node($rule);//递归循环
             $this->assign("rule", $rule_data);
             if ($id) {
@@ -99,9 +95,10 @@ class GroupController extends GlobalController
     //删除角色
     public function del_group()
     {
-        $id = I("id","", intval);
+        $id = I("id", "",intval);
         $cid = M("admin_group")->where(array('id' => $id))->delete();
         if ($cid) {
+            $this->admin_log("id:".$id);
             $this->success("删除成功！", U("group/g_list"));
         } else {
             $this->error("删除失败！");

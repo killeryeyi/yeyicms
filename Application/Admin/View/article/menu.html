@@ -1,97 +1,67 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-    <title> 详情页</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <link href="__PUBLIC__/assets/css/dpl-min.css" rel="stylesheet" type="text/css"/>
-    <link href="__PUBLIC__/assets/css/bui-min.css" rel="stylesheet" type="text/css"/>
-    <link href="__PUBLIC__/assets/css/page-min.css" rel="stylesheet" type="text/css"/>
-    <!-- 下面的样式，仅是为了显示代码，而不应该在项目中使用-->
-    <link href="__PUBLIC__/assets/css/prettify.css" rel="stylesheet" type="text/css"/>
-    <style type="text/css">
-        code {
-            padding: 0px 4px;
-            color: #d14;
-            background-color: #f7f7f9;
-            border: 1px solid #e1e1e8;
-        }
-    </style>
-</head>
-<body>
+<include file="Public:header"/>
+<body class="withvernav">
+<div class="bodywrapper">
+    <include file="Public:top"/>
+    <include file="Public:menu"/>
+    <div class="centercontent tables">
+        <div class="pageheader notab">
+            <h1 class="pagetitle">{$name}</h1>
+        </div><!--pageheader-->
 
-<div class="container">
-    <div class="detail-page">
-        <a href="__APP__/article/add_menu"><button type="button" class="button button-small"><i class="icon-plus"></i>添加栏目</button></a>
-        <div class="detail-section" style="margin-top: 10px">
-            <h3>栏目列表</h3>
-            <div class="row detail-row">
-                <div class="span24">
-                    <div id="grid">
-                        <div class="bui-simple-grid bui-simple-list bui-grid-border" aria-disabled="false"
-                             aria-pressed="false" style="width: 950px;">
-                            <table cellspacing="0" class="bui-grid-table" cellpadding="0">
-                                <thead>
-                                <tr>
-                                    <th class="bui-grid-hd " width="200">
-                                        <div class="bui-grid-hd-inner"><span class="bui-grid-hd-title">栏目名称</span></div>
-                                    </th>
-                                    <th class="bui-grid-hd " width="100">
-                                        <div class="bui-grid-hd-inner"><span class="bui-grid-hd-title">栏目类型</span></div>
-                                    </th>
-                                    <th class="bui-grid-hd " width="100">
-                                        <div class="bui-grid-hd-inner"><span class="bui-grid-hd-title">操作</span>
-                                        </div>
-                                    </th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <volist  name="list" id="vo">
-                                <tr class="bui-grid-row bui-grid-row-odd">
+        <div class="tablebox">
+            <div class="tablehead">
+                <a href="{:U('article/add_menu')}" class="add"><i class="add_sign"></i>新增</a>
 
-                                    <td class="bui-grid-cell ">
-                                        <div class="bui-grid-cell-inner"><span class="bui-grid-cell-text">{$vo.name}</span>
-                                        </div>
-                                    </td>
-                                    <td class="bui-grid-cell ">
-                                        <div class="bui-grid-cell-inner"><span class="bui-grid-cell-text"><if condition="$vo.single_page eq 1">
-                                            单页面<else/> 列表页</if>
-                                           </span>
-                                        </div>
-                                    </td>
-                                    <td class="bui-grid-cell ">
-                                        <div class="bui-grid-cell-inner"><span class="bui-grid-cell-text"><a href="__APP__/article/edit_menu/id/{$vo.id}">修改</a> <a href="__APP__/article/del_menu/id/{$vo.id}">删除</a></span>
-                                        </div>
-                                    </td>
-                                </tr>
-                                    <volist  name="vo['c']" id="v">
-                                        <tr class="bui-grid-row bui-grid-row-odd">
-                                            <td class="bui-grid-cell ">
-                                                <div class="bui-grid-cell-inner"><span class="bui-grid-cell-text">&nbsp;&nbsp;&nbsp;&nbsp;∟{$v.name}</span>
-                                                </div>
-                                            </td>
-                                            <td class="bui-grid-cell ">
-                                                <div class="bui-grid-cell-inner"><span class="bui-grid-cell-text"><if condition="$vo.single_page eq 1">
-                                                    单页面<else/> 列表页</if>
-                                           </span>
-                                                </div>
-                                            </td>
-                                            <td class="bui-grid-cell ">
-                                                <div class="bui-grid-cell-inner"><span class="bui-grid-cell-text"><a href="__APP__/article/edit_menu/id/{$v.id}">修改</a> <a href="__APP__/article/del_menu/id/{$v.id}">删除</a></span>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </volist >
-                                </volist >
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
             </div>
-        </div>
+            <div id="contentwrapper" class="contentwrapper">
+                <table cellpadding="0" cellspacing="0" border="0" id="table2" class="stdtable stdtablecb">
+                    <thead>
+                    <tr>
+                        <th class="head0">id</th>
+                        <th class="head1" style="width: 25%;">栏目名称</th>
+                        <th class="head0">栏目类型</th>
+                        <th class="head1">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <volist name="list" id="vo">
+                        <tr>
+                            <td>{$vo.id}</td>
+                            <td>{$vo.name}</td>
+                            <td align="center">
+                                <if condition="$vo.single_page eq 1">单页面<else/> 列表页</if>
+                            </td>
+                            <td align="center">
+                                <a href="{:U('article/edit_menu',array('id'=>$vo['id']))}">修改</a>
+                                <a href="{:U('article/del_menu',array('id'=>$vo['id']))}">删除</a>
+                            </td>
+                        </tr>
+                        <volist  name="vo['last']" id="v">
+                            <tr>
+                                <td>{$v.id}</td>
+                                <td><span style="margin-left: 20px">∟{$v.name}</span></td>
+                                <td align="center">
+                                    <if condition="$v.single_page eq 1">单页面<else/> 列表页</if>
+                                </td>
+                                <td align="center">
+                                    <a href="{:U('article/edit_menu',array('id'=>$v['id']))}">修改</a>
+                                    <a href="{:U('article/del_menu',array('id'=>$v['id']))}">删除</a>
+                                </td>
+                            </tr>
+                        </volist>
+                    </volist>
+                    </tbody>
+                </table>
+                <!-- <div class="dataTables_info" id="dyntable_info">显示 1 到 10 总共 51 条数据</div>-->
+                <div class="dataTables_paginate paging_full_numbers" id="dyntable_paginate">
+                    {$page}
+                </div>
+            </div><!--contentwrapper-->
+
+        </div><!-- centercontent -->
+
     </div>
-</div>
+</div><!--bodywrapper-->
 
-
-<body>
-</html>  
+</body>
+</html>

@@ -34,13 +34,14 @@
     <![endif]-->
 
 </head>
+
 <body>
 
-<div id="wrapper">
+    <div id="wrapper">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-        <div class="navbar-header">
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -259,7 +260,7 @@
                 </li>
                 <!-- /.dropdown -->
             </ul>
-         <!-- /.navbar-top-links -->
+             <!-- /.navbar-top-links -->
 
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
@@ -284,78 +285,83 @@
             </div>
             <!-- /.navbar-static-side -->
 
-    </nav>
+        </nav>
 
-    <div id="page-wrapper">
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header"><?php echo ($name); ?></h1>
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header"><?php echo ($name); ?></h1>
+                </div>
+                <!-- /.col-lg-12 -->
             </div>
-            <!-- /.col-lg-12 -->
-        </div>
-        <!-- /.row -->
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        列表
-                    </div>
-                    <!-- /.panel-heading -->
-                    <div class="panel-body">
-                        
-						<div class="col-lg-6">
-                                    <form role="form" method="post" action="<?php echo U('user/add_user');?>">
-                                        <div class="form-group">
-                                            <label>用户名</label>
-                                            <input class="form-control" name="name" type="text" value="">
-                                        </div>
-										<div class="form-group">
-                                            <label>密码</label>
-                                            <input class="form-control" name="newpass" type="password" value="">
-                                        </div>
-										<div class="form-group">
-                                            <label>确认密码</label>
-                                            <input class="form-control" name="rnewpass" type="password" value="">
-                                        </div>
-										<div class="form-group">
-                                            <label>email</label>
-                                            <input class="form-control" name="email" type="text" value="">
-                                        </div>
-										<div class="form-group">
-                                            <label>手机号</label>
-                                            <input class="form-control" name="phone" type="text" value="">
-                                        </div>
-                                        <div class="form-group">
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            列表
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+
+                            <div class="col-lg-6">
+                                <form role="form" method="post" action="<?php echo U('user/add_user');?>">
+                                    <div class="form-group">
+                                        <label>用户名</label>
+                                        <input class="form-control" name="username" type="text" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>姓名</label>
+                                        <input class="form-control" name="name" type="text" >
+                                    </div>
+                                    <div class="form-group">
+                                        <label>密码</label>
+                                        <input class="form-control" name="newpass" type="password" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>确认密码</label>
+                                        <input class="form-control" name="rnewpass" type="password" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>email</label>
+                                        <input class="form-control" name="email" type="text" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>手机号</label>
+                                        <input class="form-control" name="phone" type="text" value="">
+                                    </div>
+                                    <?php if($_SESSION['user_id']['group_id'] == '2'): ?><div class="form-group">
                                             <label>所属角色</label>
-                                            <select class="form-control" name="gid">
+                                            <select class="form-control se" name="gid">
                                                 <?php if(is_array($glist)): $i = 0; $__LIST__ = $glist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo["id"]); ?>"><?php echo ($vo["name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
                                             </select>
-                                        </div>
-                                     
-                                        <button type="submit" class="btn btn-default">提交</button>
-                                        <button type="reset" class="btn btn-default">重置</button>
-                                    </form>
-                                </div>
-                        
+                                        </div><?php endif; ?>
+                                    <button type="submit" class="btn btn-default">提交</button>
+                                    <button type="reset" class="btn btn-default">重置</button>
+                                </form>
+                            </div>
+
+                        </div>
+                        <!-- /.panel-body -->
                     </div>
-                    <!-- /.panel-body -->
+                    <!-- /.panel -->
+
                 </div>
-                <!-- /.panel -->
+                <!-- /.col-lg-12 -->
 
             </div>
-            <!-- /.col-lg-12 -->
-
+            <!-- /.row -->
         </div>
-        <!-- /.row -->
+        <!-- /#page-wrapper -->
 
     </div>
-    <!-- /#page-wrapper -->
-
-</div>
-<!-- /#wrapper -->
-
-<!-- jQuery -->
+    <!-- /#wrapper -->
+    <!-- jQuery -->
 <script src="/yeyicms/Public/sbadmin/vendor/jquery/jquery.min.js"></script>
+<script src="/yeyicms/Public/layer/layer.js"></script>
+<script src="/yeyicms/Public/mh/js/system.js"></script>
+<script type="text/javascript" src="/yeyicms/Public/mh/js/laydate/laydate.js"></script>
+
 <script>
     $("li .active").parent("ul").addClass("in");
 </script>
@@ -372,6 +378,7 @@
 
 <!-- Custom Theme JavaScript -->
 <script src="/yeyicms/Public/sbadmin/dist/js/sb-admin-2.js"></script>
+
 
 </body>
 
